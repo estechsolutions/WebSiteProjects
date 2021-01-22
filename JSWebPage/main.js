@@ -123,3 +123,32 @@ console.log(personName);
 
 const personAgeUnder45 = people.filter(p => p.age < 45);
 console.log(personAgeUnder45);
+
+let animal = 'dogs';
+const likesDogs = animal === 'dogs' ? true : false;
+//console.log('likes dogs '+ likesDogs);
+
+//DOM Document Object Model
+
+const ullist = document.getElementById('list');
+//console.log(ullist);
+
+const ullist1 = document.querySelector('ul');
+//console.log(ullist1);
+
+const ullist2 = document.querySelector('#list');
+//console.log(ullist2);
+
+const listItems = document.querySelectorAll('.list-item');
+//console.log(listItems);
+listItems.forEach(item => console.log(item.textContent));
+
+ullist.lastElementChild.remove();
+ullist.firstElementChild.textContent = "New List Item 1";
+
+// Events
+const btn = document.getElementById('myBtn');
+btn.addEventListener('click', (e) => {
+    btn.style.background = 'blue';
+    console.log(e);
+});
